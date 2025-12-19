@@ -30,11 +30,12 @@ export async function POST(req: NextRequest) {
 
     // Update priority for each task
     // taskIds array is ordered from top to bottom
-    // Index 0 (top) = lowest priority, last index (bottom) = highest priority
+    // Index 0 (top) = highest priority value, last index (bottom) = lowest priority value
+    // This matches the UI where #1 priority is at the top
     const updatePromises = taskIds.map((taskId, index) =>
       Task.updateOne(
         { _id: taskId, userId: session.user.id },
-        { $set: { priority: index } }
+        { $set: { priority: taskIds.length - 1 - index } }
       )
     );
 
