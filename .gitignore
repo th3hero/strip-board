@@ -55,3 +55,6 @@ next-env.d.ts
 # documentations are internal just for developers only no need to publish over git & no one other than the internal team should be able to access it.
 docs/*.md
 docs/*
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
