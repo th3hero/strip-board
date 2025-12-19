@@ -1,0 +1,9 @@
+docs/
+*.md
+.env.local
+.vscode/
+.cursor/
+node_modules/
+.next/
+*.log
+
